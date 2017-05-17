@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MUILoginViewController">
+            <connections>
+                <outlet property="scrollView" destination="1UW-qB-WH1" id="5ZL-ps-zvX"/>
+                <outlet property="segment" destination="Kac-9n-tgp" id="Fdl-rr-txP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UW-qB-WH1">
+                    <rect key="frame" x="0.0" y="54" width="320" height="514"/>
+                </scrollView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-9n-tgp">
+                    <rect key="frame" x="77" y="25" width="166" height="29"/>
+                    <segments>
+                        <segment title="登录"/>
+                        <segment title="注册"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="0.87450980392156863" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Kac-9n-tgp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="JoG-XY-uvk"/>
+                <constraint firstAttribute="bottom" secondItem="1UW-qB-WH1" secondAttribute="bottom" id="NlX-3o-tzT"/>
+                <constraint firstItem="1UW-qB-WH1" firstAttribute="top" secondItem="Kac-9n-tgp" secondAttribute="bottom" constant="1" id="RFl-br-gjK"/>
+                <constraint firstItem="1UW-qB-WH1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sp2-1P-8az"/>
+                <constraint firstItem="Kac-9n-tgp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="daV-wo-pX2"/>
+                <constraint firstAttribute="trailing" secondItem="Kac-9n-tgp" secondAttribute="trailing" constant="77" id="hiC-Wg-l2f"/>
+                <constraint firstAttribute="trailing" secondItem="1UW-qB-WH1" secondAttribute="trailing" id="oMc-Vr-b9U"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+</document>

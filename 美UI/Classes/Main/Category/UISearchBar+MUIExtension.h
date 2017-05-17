@@ -1,0 +1,16 @@
+//
+//  UISearchBar+MUIExtension.h
+//  美UI
+//
+//  Created by Lee on 15-12-23.
+//  Copyright (c) 2015年 Lee. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface UISearchBar (MUIExtension)
+
+- (void)setSearchTextFieldBackgroundColor:(UIColor *)backgroundColor;
+
+
+@end

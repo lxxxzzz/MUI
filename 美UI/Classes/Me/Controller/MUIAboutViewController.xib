@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MUIAboutViewController">
+            <connections>
+                <outlet property="version" destination="Kf9-kx-FNO" id="SLf-Wy-iGV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weixin" destination="XnR-u4-HDr" id="hTy-Oa-miL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="756"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_icon" translatesAutoresizingMaskIntoConstraints="NO" id="LKL-bh-rFk" userLabel="logo">
+                    <rect key="frame" x="250" y="100" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="EA7-qZ-fcJ"/>
+                        <constraint firstAttribute="width" secondItem="LKL-bh-rFk" secondAttribute="height" multiplier="1:1" id="a3F-v2-QBo"/>
+                        <constraint firstAttribute="height" constant="100" id="qVH-vk-KOR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version :1.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf9-kx-FNO">
+                    <rect key="frame" x="262" y="212" width="76" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用心做好工具" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtF-cC-02T">
+                    <rect key="frame" x="258" y="263" width="84" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnR-u4-HDr">
+                    <rect key="frame" x="213" y="669" width="174" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="hRi-8e-vc9"/>
+                        <constraint firstAttribute="width" constant="174" id="kvC-P5-Nf9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <state key="normal" title="在微信上和我说两句">
+                        <color key="titleColor" red="0.30980392156862746" green="0.74117647058823533" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="WXView" destination="-1" eventType="touchUpInside" id="fNB-ow-2ND"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="麻乌科技 版权所有 Copyright© 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd2-7v-Ebz">
+                    <rect key="frame" x="209" y="730" width="183" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LKL-bh-rFk" secondAttribute="trailing" constant="147" id="4IJ-Ru-rDD"/>
+                <constraint firstItem="LKL-bh-rFk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="147" id="4xN-45-m1T"/>
+                <constraint firstItem="AtF-cC-02T" firstAttribute="top" secondItem="Kf9-kx-FNO" secondAttribute="bottom" constant="36" id="9kS-Tx-2ge"/>
+                <constraint firstItem="Kf9-kx-FNO" firstAttribute="top" secondItem="LKL-bh-rFk" secondAttribute="bottom" constant="12" id="I8a-5l-FVI"/>
+                <constraint firstAttribute="centerX" secondItem="XnR-u4-HDr" secondAttribute="centerX" id="JJr-Sw-Woj"/>
+                <constraint firstItem="LKL-bh-rFk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="QeU-53-beL"/>
+                <constraint firstAttribute="bottom" secondItem="Pd2-7v-Ebz" secondAttribute="bottom" constant="12" id="TNm-LM-pUz"/>
+                <constraint firstAttribute="centerX" secondItem="Pd2-7v-Ebz" secondAttribute="centerX" id="ZQ1-lB-qfD"/>
+                <constraint firstAttribute="centerX" secondItem="AtF-cC-02T" secondAttribute="centerX" id="d0X-G3-fJw"/>
+                <constraint firstItem="Pd2-7v-Ebz" firstAttribute="top" secondItem="XnR-u4-HDr" secondAttribute="bottom" constant="27" id="eov-M6-OGe"/>
+                <constraint firstAttribute="centerY" secondItem="Kf9-kx-FNO" secondAttribute="centerY" id="kkN-kT-tzJ"/>
+                <constraint firstAttribute="centerX" secondItem="Kf9-kx-FNO" secondAttribute="centerX" id="ocv-nc-Fwb"/>
+                <constraint firstItem="AtF-cC-02T" firstAttribute="top" secondItem="Kf9-kx-FNO" secondAttribute="bottom" constant="10" id="v4a-Ii-i8V"/>
+                <constraint firstAttribute="centerX" secondItem="LKL-bh-rFk" secondAttribute="centerX" id="yES-1r-Ifn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4IJ-Ru-rDD"/>
+                    <exclude reference="4xN-45-m1T"/>
+                    <exclude reference="kkN-kT-tzJ"/>
+                    <exclude reference="v4a-Ii-i8V"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="139" y="232"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="about_icon" width="1024" height="1024"/>
+    </resources>
+</document>

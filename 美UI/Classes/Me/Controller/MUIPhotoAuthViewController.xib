@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MUIPhotoAuthViewController">
+            <connections>
+                <outlet property="authLabel" destination="fiW-be-mmq" id="yPQ-gG-MoE"/>
+                <outlet property="photoImage" destination="vdL-72-XdO" id="LH0-y9-XaK"/>
+                <outlet property="photoLabel" destination="kJy-Vl-t8u" id="Pcn-tC-Ps9"/>
+                <outlet property="settingImage" destination="mpZ-x5-ocP" id="Eka-cS-nX5"/>
+                <outlet property="settingLabel" destination="BuQ-1y-Ykg" id="KbW-mX-EJp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-ld-W33">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rKg-UB-UHm"/>
+                    </constraints>
+                    <state key="normal" title="暂不需要">
+                        <color key="titleColor" red="0.36862745099999999" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel" destination="-1" eventType="touchUpInside" id="v36-Af-Lps"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sys_settings" translatesAutoresizingMaskIntoConstraints="NO" id="mpZ-x5-ocP">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="kOr-aZ-01T"/>
+                        <constraint firstAttribute="width" constant="40" id="poH-45-0Ns"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sys_photos" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-72-XdO">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="71U-FV-sp9"/>
+                        <constraint firstAttribute="height" constant="40" id="scZ-jf-TcS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.轻按此处，前往 美UI 设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuQ-1y-Ykg">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.将照片设置为“开”" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-Vl-t8u">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iMD-Gq-dbe">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZWI-cB-vOe"/>
+                        <constraint firstAttribute="width" constant="50" id="gev-xl-Cbp"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="授予照片访问权限" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiW-be-mmq">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fiW-be-mmq" firstAttribute="top" secondItem="iMD-Gq-dbe" secondAttribute="bottom" constant="30" id="0n2-x9-6CX"/>
+                <constraint firstItem="kJy-Vl-t8u" firstAttribute="leading" secondItem="vdL-72-XdO" secondAttribute="trailing" constant="10" id="5fp-cy-hwX"/>
+                <constraint firstAttribute="bottom" secondItem="eRT-ld-W33" secondAttribute="bottom" constant="116" id="8Hp-1x-5k3"/>
+                <constraint firstItem="mpZ-x5-ocP" firstAttribute="centerY" secondItem="BuQ-1y-Ykg" secondAttribute="centerY" constant="0.5" id="9TC-tH-sda"/>
+                <constraint firstItem="BuQ-1y-Ykg" firstAttribute="leading" secondItem="mpZ-x5-ocP" secondAttribute="trailing" constant="10" id="CYd-I6-oKW"/>
+                <constraint firstItem="mpZ-x5-ocP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Icp-hZ-T5u"/>
+                <constraint firstAttribute="centerX" secondItem="fiW-be-mmq" secondAttribute="centerX" id="JPQ-vm-aI6"/>
+                <constraint firstItem="kJy-Vl-t8u" firstAttribute="centerY" secondItem="vdL-72-XdO" secondAttribute="centerY" constant="-0.5" id="Pvl-9c-2gO"/>
+                <constraint firstAttribute="centerX" secondItem="iMD-Gq-dbe" secondAttribute="centerX" id="VAe-1T-cIL"/>
+                <constraint firstAttribute="centerY" secondItem="mpZ-x5-ocP" secondAttribute="centerY" constant="19.5" id="ae2-Nl-aKe"/>
+                <constraint firstItem="vdL-72-XdO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="agR-oB-6fW"/>
+                <constraint firstItem="vdL-72-XdO" firstAttribute="top" secondItem="mpZ-x5-ocP" secondAttribute="bottom" constant="15" id="cFd-A0-AxM"/>
+                <constraint firstAttribute="centerY" secondItem="BuQ-1y-Ykg" secondAttribute="centerY" id="czg-Cq-lCY"/>
+                <constraint firstAttribute="centerX" secondItem="eRT-ld-W33" secondAttribute="centerX" id="hhf-yE-L0I"/>
+                <constraint firstAttribute="centerY" secondItem="eRT-ld-W33" secondAttribute="centerY" id="ieC-Xi-Chh"/>
+                <constraint firstAttribute="centerY" secondItem="fiW-be-mmq" secondAttribute="centerY" constant="109" id="zSH-ik-mHA"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="czg-Cq-lCY"/>
+                    <exclude reference="ieC-Xi-Chh"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="141" y="157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="about_icon" width="1024" height="1024"/>
+        <image name="sys_photos" width="512" height="512"/>
+        <image name="sys_settings" width="512" height="512"/>
+    </resources>
+</document>

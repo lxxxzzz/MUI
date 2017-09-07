@@ -26,7 +26,6 @@
 		9B3158F61CA91908001A6B1F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3158EF1CA91908001A6B1F /* FMDatabaseQueue.m */; };
 		9B3158F71CA91908001A6B1F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3158F21CA91908001A6B1F /* FMResultSet.m */; };
 		9B3159001CA927A6001A6B1F /* MUICacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3158FF1CA927A6001A6B1F /* MUICacheTool.m */; };
-		9B3159041CAA4917001A6B1F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3159031CAA4917001A6B1F /* libsqlite3.0.dylib */; };
 		9B3AFEEA1CAFA8B1003502B5 /* MUIAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AFEE91CAFA8B1003502B5 /* MUIAddTagViewController.m */; };
 		9B3AFEF31CB0147A003502B5 /* MUITagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AFEF21CB0147A003502B5 /* MUITagTextField.m */; };
 		9B3AFEF61CB741FA003502B5 /* MUIFolderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AFEF51CB741FA003502B5 /* MUIFolderLayout.m */; };
@@ -108,7 +107,7 @@
 		9BFA38101C239E7600E28636 /* MUINavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA380F1C239E7600E28636 /* MUINavigationViewController.m */; };
 		9BFA38141C23A22100E28636 /* UIBarButtonItem+MUIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA38131C23A22100E28636 /* UIBarButtonItem+MUIExtension.m */; };
 		9BFA381A1C23A53E00E28636 /* MUICollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA38191C23A53E00E28636 /* MUICollectionViewFlowLayout.m */; };
-		A0EA59B90AFB6FA9A7F6069D /* libPods-美UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD617EF03F68C16A8389F9CD /* libPods-美UI.a */; };
+		BF5D1BE7740732DF1A859CA7 /* libPods-美UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E14ACC4CA44B6B1CFA9D75 /* libPods-美UI.a */; };
 		E01327A71E6946AD007D9BD7 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01327A61E6946AD007D9BD7 /* WaveView.m */; };
 		E01327EC1E6D5487007D9BD7 /* HTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E01327EB1E6D5487007D9BD7 /* HTTPTool.m */; };
 		E01327EF1E6D6498007D9BD7 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E01327EE1E6D6498007D9BD7 /* HomeViewModel.m */; };
@@ -156,6 +155,7 @@
 
 /* Begin PBXFileReference section */
 		103F6C34A120514BC1DA6D2C /* Pods-美UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美UI.release.xcconfig"; path = "Pods/Target Support Files/Pods-美UI/Pods-美UI.release.xcconfig"; sourceTree = "<group>"; };
+		37E14ACC4CA44B6B1CFA9D75 /* libPods-美UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7302249DF1D8633E901A50 /* Pods-美UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美UI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-美UI/Pods-美UI.debug.xcconfig"; sourceTree = "<group>"; };
 		9B06F0511E586C6B0040BDBF /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
 		9B06F0521E586C6B0040BDBF /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
@@ -197,7 +197,6 @@
 		9B3158F21CA91908001A6B1F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		9B3158FE1CA927A6001A6B1F /* MUICacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUICacheTool.h; sourceTree = "<group>"; };
 		9B3158FF1CA927A6001A6B1F /* MUICacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUICacheTool.m; sourceTree = "<group>"; };
-		9B3159031CAA4917001A6B1F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		9B3AFEE81CAFA8B1003502B5 /* MUIAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUIAddTagViewController.h; sourceTree = "<group>"; };
 		9B3AFEE91CAFA8B1003502B5 /* MUIAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUIAddTagViewController.m; sourceTree = "<group>"; };
 		9B3AFEF11CB0147A003502B5 /* MUITagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUITagTextField.h; sourceTree = "<group>"; };
@@ -344,7 +343,6 @@
 		9BFA38131C23A22100E28636 /* UIBarButtonItem+MUIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MUIExtension.m"; sourceTree = "<group>"; };
 		9BFA38181C23A53E00E28636 /* MUICollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUICollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		9BFA38191C23A53E00E28636 /* MUICollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUICollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		BD617EF03F68C16A8389F9CD /* libPods-美UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01327A51E6946AD007D9BD7 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		E01327A61E6946AD007D9BD7 /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		E01327EA1E6D5487007D9BD7 /* HTTPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTool.h; sourceTree = "<group>"; };
@@ -361,7 +359,6 @@
 		E027BDA51DD31E7E00DF9C79 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E030012D1D2A3D9100912174 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		E030012E1D2A3D9100912174 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		E03001751D2B4E5B00912174 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = "../../../../Downloads/umsdk_IOS_analyics_no-idfa_v4.0.5/UMMobClick.framework"; sourceTree = "<group>"; };
 		E03001771D2B4E8300912174 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E03001791D2B4E9000912174 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E030017B1D2B4E9F00912174 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -421,8 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E030017C1D2B4E9F00912174 /* libsqlite3.tbd in Frameworks */,
-				9B3159041CAA4917001A6B1F /* libsqlite3.0.dylib in Frameworks */,
-				A0EA59B90AFB6FA9A7F6069D /* libPods-美UI.a in Frameworks */,
+				BF5D1BE7740732DF1A859CA7 /* libPods-美UI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,9 +447,8 @@
 				E030017B1D2B4E9F00912174 /* libsqlite3.tbd */,
 				E03001791D2B4E9000912174 /* libz.tbd */,
 				E03001771D2B4E8300912174 /* CoreTelephony.framework */,
-				E03001751D2B4E5B00912174 /* UMMobClick.framework */,
 				E0685F4B1D2A353B00B61425 /* Security.framework */,
-				BD617EF03F68C16A8389F9CD /* libPods-美UI.a */,
+				37E14ACC4CA44B6B1CFA9D75 /* libPods-美UI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -802,7 +797,6 @@
 		9BFA37401C22630300E28636 = {
 			isa = PBXGroup;
 			children = (
-				9B3159031CAA4917001A6B1F /* libsqlite3.0.dylib */,
 				9BFA374B1C22630300E28636 /* 美UI */,
 				9BFA37651C22630300E28636 /* 美UITests */,
 				9BFA374A1C22630300E28636 /* Products */,
@@ -1162,7 +1156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FBDD500A7AFE828931D3E0F7 /* [CP] Embed Pods Frameworks */ = {

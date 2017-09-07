@@ -17,7 +17,7 @@
 #import "MUIResetPwdViewController.h"
 #import "MUIHttpParams.h"
 #import "MUIHTTPCode.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 #import "UITextField+Shake.h"
 #import "DismissTranslation.h"
 
@@ -191,29 +191,29 @@ static CGFloat const kLoginBtnH = 57;
 
 #pragma mark - 微信登陆
 - (void)weixinLogin {
-    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
-    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
-        if (response.responseCode == UMSResponseCodeSuccess) {
-            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
-            NSMutableDictionary *params = [MUIHttpParams weixinParams];
-            params[@"username"] = snsAccount.unionId; // 唯一标识
-            params[@"user_pic"] = snsAccount.iconURL; // 头像
-            params[@"nickname"] = snsAccount.userName; // 昵称
-            [MUIHttpTool GET:MUIBaseUrl params:params success:^(id json) {
-                MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
-                if (code.success) {
-                    [User userWithJSON:code.data completion:^{
-                        [MUINotificationCenter postNotificationName:MUIDidLoginNotification object:nil userInfo:nil];
-                        [self dismissViewControllerAnimated:NO completion:self.dismissCompletion];
-                    }];
-                } else {
-                    [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
-                }
-            } failure:^(NSError *err) {
-                [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
-            }];
-        }
-    });
+//    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
+//    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+//            NSMutableDictionary *params = [MUIHttpParams weixinParams];
+//            params[@"username"] = snsAccount.unionId; // 唯一标识
+//            params[@"user_pic"] = snsAccount.iconURL; // 头像
+//            params[@"nickname"] = snsAccount.userName; // 昵称
+//            [MUIHttpTool GET:MUIBaseUrl params:params success:^(id json) {
+//                MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
+//                if (code.success) {
+//                    [User userWithJSON:code.data completion:^{
+//                        [MUINotificationCenter postNotificationName:MUIDidLoginNotification object:nil userInfo:nil];
+//                        [self dismissViewControllerAnimated:NO completion:self.dismissCompletion];
+//                    }];
+//                } else {
+//                    [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+//                }
+//            } failure:^(NSError *err) {
+//                [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+//            }];
+//        }
+//    });
 }
 
 #pragma mark - setter and getter

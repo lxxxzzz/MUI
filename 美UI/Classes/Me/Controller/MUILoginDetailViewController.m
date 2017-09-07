@@ -13,7 +13,7 @@
 #import "MUIResetPwdViewController.h"
 #import "MUIHttpParams.h"
 #import "MUIHTTPCode.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 #import "UITextField+Shake.h"
 #import "User.h"
 
@@ -121,42 +121,37 @@
 }
 
 - (IBAction)weixinLogin:(id)sender forEvent:(UIEvent *)event {
-    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
-    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
-        if (response.responseCode == UMSResponseCodeSuccess) {
-            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
-            [self addUsers:dict[@"wxsession"]];
-
-//            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
-//            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
-            
-        }
-    });
+//    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
+//    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+//            [self addUsers:dict[@"wxsession"]];
+//        }
+//    });
 }
 
 #pragma mark - 微信登陆
-- (void)addUsers:(UMSocialAccountEntity *)account {
-    NSMutableDictionary *params = [MUIHttpParams weixinParams];
-    params[@"username"] = account.unionId; // 唯一标识
-    params[@"user_pic"] = account.iconURL; // 头像
-    params[@"nickname"] = account.userName; // 昵称
-    [MUIHttpTool GET:MUIBaseUrl params:params success:^(id json) {
-        MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
-        if (code.success) {
-            [User userWithJSON:code.data completion:^{
-                [MUINotificationCenter postNotificationName:MUIDidLoginNotification object:nil userInfo:nil];
-                [self dismissViewControllerAnimated:NO completion:nil];
-            }];
-        } else {
-            [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
-        }
-    } failure:^(NSError *err) {
-        [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
-    }];
-}
+//- (void)addUsers:(UMSocialAccountEntity *)account {
+//    NSMutableDictionary *params = [MUIHttpParams weixinParams];
+//    params[@"username"] = account.unionId; // 唯一标识
+//    params[@"user_pic"] = account.iconURL; // 头像
+//    params[@"nickname"] = account.userName; // 昵称
+//    [MUIHttpTool GET:MUIBaseUrl params:params success:^(id json) {
+//        MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
+//        if (code.success) {
+//            [User userWithJSON:code.data completion:^{
+//                [MUINotificationCenter postNotificationName:MUIDidLoginNotification object:nil userInfo:nil];
+//                [self dismissViewControllerAnimated:NO completion:nil];
+//            }];
+//        } else {
+//            [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+//        }
+//    } failure:^(NSError *err) {
+//        [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+//    }];
+//}
 
-- (void)dealloc
-{
+- (void)dealloc {
     [MUINotificationCenter removeObserver:self];
 }
 

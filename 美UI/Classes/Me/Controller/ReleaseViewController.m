@@ -33,6 +33,7 @@ UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (nonatomic, strong) UIScrollView *backScrollView;
 @property (nonatomic, strong) UIButton *publish;
 @property (nonatomic, strong) NSArray *tags;
+@property (nonatomic, weak) UIView *maskView;
 
 @end
 
@@ -142,6 +143,43 @@ static CGFloat const offset = 200;
     [self.navigationController pushViewController:tagVc animated:YES];
 }
 
+- (void)clickImage {
+    UIView *maskView = [[UIView alloc] init];
+    maskView.frame = [UIApplication sharedApplication].keyWindow.bounds;
+    maskView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+    [[UIApplication sharedApplication].keyWindow addSubview:maskView];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeImage)];
+    [maskView addGestureRecognizer:tap];
+    imageView.image = self.imageView.image;
+    
+    CGRect rect = [self.imageView.superview convertRect:self.imageView.frame toView:[UIApplication sharedApplication].keyWindow];
+    imageView.frame = rect;
+    [maskView addSubview:imageView];
+    [UIView animateWithDuration:0.3 animations:^{
+        CGFloat x = 0;
+        CGFloat w = SCREEN_WIDTH;
+        CGFloat h = SCREEN_WIDTH * self.imageView.image.size.height / self.imageView.image.size.width;
+        CGFloat y = (SCREEN_HEIGHT - h) / 2;
+        imageView.frame = CGRectMake(x, y, w, h);
+        maskView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
+    }];
+    self.maskView = maskView;
+}
+
+- (void)closeImage {
+    UIImageView *imageView = [self.maskView.subviews firstObject];
+    CGRect rect = [self.imageView.superview convertRect:self.imageView.frame toView:[UIApplication sharedApplication].keyWindow];
+    [UIView animateWithDuration:0.3 animations:^{
+        imageView.frame = rect;
+        self.maskView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+    } completion:^(BOOL finished) {
+        [self.maskView removeFromSuperview];
+    }];
+}
+
 - (void)back {
     [self hideKeyboard];
     
@@ -179,7 +217,7 @@ static CGFloat const offset = 200;
 #endif
     put.objectKey = [NSString stringWithFormat:@"upload/user_app/%@", fileName];
 //    put.uploadingData = UIImagePNGRepresentation(self.image); // 直接上传NSData
-    put.uploadingData = UIImageJPEGRepresentation(self.image, 0.7);
+    put.uploadingData = UIImageJPEGRepresentation(self.image, 0.4);
     
     put.uploadProgress = ^(int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend) {
         // 当前上传段长度、当前已经上传总长度、一共需要上传的总长度
@@ -426,6 +464,8 @@ static CGFloat const offset = 200;
     if (_imageView == nil) {
         _imageView = [[UIImageView alloc] init];
         _imageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
+        [_imageView addGestureRecognizer:tap];
     }
     return _imageView;
 }

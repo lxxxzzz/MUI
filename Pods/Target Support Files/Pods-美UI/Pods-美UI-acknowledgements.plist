@@ -152,6 +152,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright © 2012-2015 mob</string>
+			<key>License</key>
+			<string>Copyright © 2012-2017 mob.com</string>
+			<key>Title</key>
+			<string>MOBFoundation</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2013 mineschan
@@ -271,6 +281,17 @@ respective headers for the terms of their individual licenses.
 			<string>MIT</string>
 			<key>Title</key>
 			<string>SVProgressHUD</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright © 2012-2016 mob
+</string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ShareSDK3</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

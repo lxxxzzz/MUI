@@ -20,6 +20,7 @@
 //#import "UMSocial.h"
 #import "UITextField+Shake.h"
 #import "DismissTranslation.h"
+#import <ShareSDK/ShareSDK.h>
 
 @interface LoginViewController ()
 
@@ -191,6 +192,31 @@ static CGFloat const kLoginBtnH = 57;
 
 #pragma mark - 微信登陆
 - (void)weixinLogin {
+    [ShareSDK getUserInfo:SSDKPlatformTypeWechat onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+         if (state == SSDKResponseStateSuccess) {
+             NSMutableDictionary *params = [MUIHttpParams weixinParams];
+                 params[@"username"] = user.uid; // 唯一标识
+                 params[@"user_pic"] = user.icon; // 头像
+                 params[@"nickname"] = user.nickname; // 昵称
+                 [MUIHttpTool GET:MUIBaseUrl params:params success:^(id json) {
+                     MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
+                     if (code.success) {
+                         [User userWithJSON:code.data completion:^{
+                             [MUINotificationCenter postNotificationName:MUIDidLoginNotification object:nil userInfo:nil];
+                             [self dismissViewControllerAnimated:NO completion:self.dismissCompletion];
+                         }];
+                     } else {
+                         [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+                     }
+                 } failure:^(NSError *err) {
+                     [SVProgressHUD showErrorWithStatus:@"微信授权失败"];
+                 }];
+         } else {
+             NSLog(@"%@",error);
+         }
+         
+     }];
+    
 //    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
 //    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
 //        if (response.responseCode == UMSResponseCodeSuccess) {

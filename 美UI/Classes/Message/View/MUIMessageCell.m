@@ -37,7 +37,13 @@
     self.messageTime.text = [message stringWithTimeInterval];
     self.messageContent.text = message.messageContent;
     [self.messageImage sd_setImageWithURL:[NSURL URLWithString:message.messageImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        self.widthConstraints.constant = self.messageImage.frame.size.height * image.size.width / image.size.height;
+        NSLog(@"%@   %@",image, message);
+        if (image) {
+            self.widthConstraints.constant = self.messageImage.frame.size.height * image.size.width / image.size.height;
+        } else {
+            self.widthConstraints.constant = self.messageImage.frame.size.height * 100 / 50;
+        }
+
     }];
 }
 

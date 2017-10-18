@@ -19,10 +19,18 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - MOBFoundation (3.0.2)
   - MZTimerLabel (0.5.4)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - ShareSDK3 (4.0.1):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 4.0.1)
+  - ShareSDK3/ShareSDK (4.0.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (4.0.1):
+    - MOBFoundation
   - SVProgressHUD (2.1.2)
   - UIActivityIndicator-for-SDWebImage (1.2):
     - SDWebImage (~> 3.7)
@@ -42,8 +50,11 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - MOBFoundation
   - MZTimerLabel
   - SDWebImage
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/WeChat
   - SVProgressHUD
   - UIActivityIndicator-for-SDWebImage
   - UMengAnalytics-NO-IDFA
@@ -56,8 +67,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MOBFoundation: d5e27c4638d911d3c7501aa5df458955d4814359
   MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  ShareSDK3: 6983a9b5209b63f2f4297fb0328d9a8dd6abd5f1
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
@@ -65,6 +78,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 609939c83a5509dc292a985422da8ce4d42b0b3d
+PODFILE CHECKSUM: 3b50220ff09e1b50af312057ab25282bbda4e801
 
 COCOAPODS: 1.2.1

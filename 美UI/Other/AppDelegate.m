@@ -13,6 +13,12 @@
 //#import "UMSocial.h"
 //#import "UMSocialWechatHandler.h"
 #import <SVProgressHUD.h>
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+//微信SDK头文件
+#import <WXApi.h>
+
 
 static NSString *const kWeiXinAppId         = @"wx14093609e92b28c0";
 static NSString *const kWeiXinAppSecret     = @"6c4aa8aa89cc6c5844f56f7b3029537d";
@@ -35,9 +41,24 @@ static NSString *const kUmengAppId          = @"577b1346e0f55a9a58003efb";
     UMConfigInstance.channelId = @"App Store";
     [MobClick startWithConfigure:UMConfigInstance];
     
-    // 友盟分享及第三方登录
-//    [UMSocialData setAppKey:kUmengAppId];
-//    [UMSocialWechatHandler setWXAppId:kWeiXinAppId appSecret:kWeiXinAppSecret url:@"http://www.umeng.com/social"];
+    [ShareSDK registerActivePlatforms:@[@(SSDKPlatformTypeWechat)] onImport:^(SSDKPlatformType platformType) {
+        switch (platformType) {
+            case SSDKPlatformTypeWechat:
+            [ShareSDKConnector connectWeChat:[WXApi class]];
+            break;
+            default:
+            break;
+        }
+    } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+        switch (platformType) {
+            case SSDKPlatformTypeWechat:
+            [appInfo SSDKSetupWeChatByAppId:kWeiXinAppId
+                                  appSecret:kWeiXinAppSecret];
+            break;
+            default:
+            break;
+        }
+    }];
     
     [SVProgressHUD setMinimumDismissTimeInterval:0.5];
     [SVProgressHUD setBackgroundColor:RGBA(0, 0, 0, 0.6)];

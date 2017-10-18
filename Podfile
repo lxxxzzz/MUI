@@ -12,5 +12,10 @@ target '美UI' do
     pod 'YYWebImage'
     pod 'UIActivityIndicator-for-SDWebImage'
     pod 'AliyunOSSiOS', '~> 2.6.0'
+    
+    pod 'ShareSDK3'
+    pod 'MOBFoundation'
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+    
 end
 

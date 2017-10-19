@@ -30,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
+    self.view.backgroundColor = BG_COLOR;
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.noResut];
     [self.noResut mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,6 +81,7 @@
             [SVProgressHUD showErrorWithStatus:json[@"msg"]];
         }
         self.noResut.hidden = self.messages.count != 0;
+        self.tableView.hidden = !self.noResut.hidden;
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
     } failure:^(NSError *err) {

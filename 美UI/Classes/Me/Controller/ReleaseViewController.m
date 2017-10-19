@@ -222,7 +222,6 @@ static CGFloat const offset = 200;
     
     put.uploadProgress = ^(int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend) {
         // 当前上传段长度、当前已经上传总长度、一共需要上传的总长度
-//        NSLog(@"当前上传大小%lld, 已经上传总长度%lld, 总长度%lld", bytesSent, totalByteSent, totalBytesExpectedToSend);
         printf("当前上传大小%lld, 已经上传总长度%lld, 总长度%lld", bytesSent, totalByteSent, totalBytesExpectedToSend);
     };
     __weak typeof(self) weakSelf = self;

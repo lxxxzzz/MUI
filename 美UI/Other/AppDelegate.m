@@ -64,14 +64,6 @@ static NSString *const kUmengAppId          = @"577b1346e0f55a9a58003efb";
     return YES;
 }
 
-//- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(nonnull id)annotation {
-//    BOOL result = [UMSocialSnsService handleOpenURL:url];
-//    if (result == FALSE) {
-        //调用其他SDK，例如支付宝SDK等
-//    }
-//    return result;
-//}
-    
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

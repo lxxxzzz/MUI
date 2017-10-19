@@ -10,13 +10,9 @@
 #import "MUITabBarViewController.h"
 #import "MUIMeViewController.h"
 #import "UMMobClick/MobClick.h"
-//#import "UMSocial.h"
-//#import "UMSocialWechatHandler.h"
 #import <SVProgressHUD.h>
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
-//腾讯开放平台（对应QQ和QQ空间）SDK头文件
-//微信SDK头文件
 #import <WXApi.h>
 
 

@@ -16,6 +16,7 @@
 #import "MUINavigationViewController.h"
 #import "UIBarButtonItem+MUIExtension.h"
 #import "MUIHttpParams.h"
+#import <SDWebImageManager.h>
 #import <Masonry.h>
 #import <AliyunOSSiOS/OSSService.h>
 #import <SVProgressHUD.h>
@@ -230,6 +231,7 @@ static CGFloat const offset = 200;
         if (!task.error) {
             NSString *imageURL = [NSString stringWithFormat:@"http://%@.%@/%@", put.bucketName, endpoint, put.objectKey];
             [weakSelf upload:imageURL];
+            [[SDWebImageManager sharedManager] saveImageToCache:weakSelf.image forURL:[NSURL URLWithString:imageURL]];
         } else {
             [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"上传失败, error: %@" , task.error]];
         }

@@ -31,7 +31,8 @@ static NSInteger const margin = 5;
 }
 
 - (void)setup {
-    self.backgroundColor = RGB(242, 242, 242);
+//    self.backgroundColor = RGB(242, 242, 242);
+    self.backgroundColor = [UIColor clearColor];
     [self addSubview:self.backView];
     [self addSubview:self.categoryLabel];
     
@@ -47,6 +48,11 @@ static NSInteger const margin = 5;
         make.right.mas_equalTo(self.mas_right);
         make.bottom.mas_equalTo(self.mas_bottom);
     }];
+    
+    for (NSInteger i=0; i<4; i++) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        [self.backView addSubview:imageView];
+    }
 }
 
 - (void)setItem:(MUIMeCollectItem *)item {
@@ -58,6 +64,13 @@ static NSInteger const margin = 5;
     CGFloat width = (self.bounds.size.width - (margin * (columnCount + 1))) / columnCount;
     NSInteger count = MIN(4, item.items.count);
     
+    for (UIView *view in self.backView.subviews) {
+        if ([view isKindOfClass:[UIImageView class]]) {
+            UIImageView *imageView = (UIImageView *)view;
+            imageView.image = nil;
+        }
+    }
+    
     for (NSInteger i=0; i<count; i++) {
         Item *temp = item.items[i];
         CGFloat heigth = width * temp.pic_h / temp.pic_w;
@@ -65,8 +78,9 @@ static NSInteger const margin = 5;
         NSInteger column = i % columnCount;
         CGFloat x = column * (width + margin) + margin;
         CGFloat y = row * (heigth + margin) + margin;
-        UIImageView *imageView = [[UIImageView alloc] init];
-        [self.backView addSubview:imageView];
+//        UIImageView *imageView = [[UIImageView alloc] init];
+        UIImageView *imageView = self.backView.subviews[i];
+//        [self.backView addSubview:imageView];
         imageView.frame = CGRectMake(x, y, width, heigth);
         [imageView sd_setImageWithURL:[NSURL URLWithString:temp.pic] placeholderImage:temp.placeholder];
     }
@@ -90,6 +104,7 @@ static NSInteger const margin = 5;
         _categoryLabel = [[UILabel alloc] init];
         _categoryLabel.font = FONT(15);
         _categoryLabel.textColor = RGB(55, 55, 55);
+        _categoryLabel.backgroundColor = [UIColor clearColor];
     }
     return _categoryLabel;
 }

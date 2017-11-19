@@ -9,6 +9,7 @@
 #import "MUIMessageCell.h"
 #import "MUIMessage.h"
 #import "UIImageView+WebCache.h"
+#import "NSURL+chinese.h"
 
 @interface MUIMessageCell ()
 
@@ -33,10 +34,20 @@
 
 - (void)setMessage:(MUIMessage *)message {
     _message = message;
-    self.messageType.text = message.messageType;
+//    if ([message.messageType isEqualToString:@"1"]) {
+//        self.messageType.text = @"未处理";
+//    } else if ([message.messageType isEqualToString:@"2"]) {
+//        self.messageType.text = @"已处理";
+//    } else if ([message.messageType isEqualToString:@"3"]) {
+//        self.messageType.text = @"审核失败";
+//    } else {
+//        self.messageType.text = @"";
+//    }
+    self.messageType.text = @"系统消息";
     self.messageTime.text = [message stringWithTimeInterval];
     self.messageContent.text = message.messageContent;
-    [self.messageImage sd_setImageWithURL:[NSURL URLWithString:message.messageImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    NSURL *url = [NSURL xx_URLWithString:message.messageImage];
+    [self.messageImage sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         NSLog(@"%@   %@",image, message);
         if (image) {
             self.widthConstraints.constant = self.messageImage.frame.size.height * image.size.width / image.size.height;

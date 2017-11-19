@@ -60,6 +60,8 @@
     
     Item *item = self.items[self.selectedIndex];
     self.toolBar.collectButton.selected = item.is_like == 1;
+    
+//    [self getDetailData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -220,7 +222,7 @@
         [weakSelf.collectView reloadData];
         
         // 将新添加的tag添加到user单例中
-        [[User sharedUser].tags addObjectsFromArray:tags];
+        [[[User sharedUser].tags mutableCopy] addObjectsFromArray:tags];
     };
     [self presentViewController:nav animated:YES completion:nil];
 }
@@ -231,22 +233,22 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-//- (void)getDetailData {
-//    NSMutableDictionary *params = [MUIHttpParams detailParams];
-//    Item *item = self.items[self.selectedIndex];
-//    params[@"pic_id"] = item.pic_id;
-//    if ([User isOnline]) {
-//        params[@"user_id"] = USER.user_id;
-//    }
-//    [HTTPTool GET:MUIBaseUrl params:params success:^(id json) {
-//        MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
-//        if (code.success) {
-//            Item *item = [Item mj_objectWithKeyValues:[code.data[@"items"] firstObject]];
-//        }
-//    } failure:^(NSError *err) {
-//        
-//    }];
-//}
+- (void)getDetailData {
+    NSMutableDictionary *params = [MUIHttpParams detailParams];
+    Item *item = self.items[self.selectedIndex];
+    params[@"pic_id"] = item.pic_id;
+    if ([User isOnline]) {
+        params[@"user_id"] = USER.user_id;
+    }
+    [HTTPTool GET:MUIBaseUrl params:params success:^(id json) {
+        MUIHTTPCode *code = [MUIHTTPCode codeWithJSON:json];
+        if (code.success) {
+            Item *item = [Item mj_objectWithKeyValues:[code.data[@"items"] firstObject]];
+        }
+    } failure:^(NSError *err) {
+        
+    }];
+}
 
 - (void)loadMoreData {
     // 当前页码加1

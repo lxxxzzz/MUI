@@ -156,8 +156,10 @@ static NSString * const kReuseIdentifier = @"kReuseIdentifier";
                     item.app_name = dict[@"pic_app"];
                     item.pic_w = [dict[@"pic_w"] floatValue];
                     item.pic_h = [dict[@"pic_h"] floatValue];
-                    item.user_name = dict[@"user_name"];
+//                    item.user_name = dict[@"user_name"];
                     item.user_id = dict[@"user_id"];
+                    item.user_name = dict[@"user_name"];
+                    item.user_pic = dict[@"user_pic"];
                     [unpass_pic addObject:item];
                 }
                 
@@ -169,6 +171,8 @@ static NSString * const kReuseIdentifier = @"kReuseIdentifier";
                     item.app_name = dict[@"pic_app"];
                     item.pic_w = [dict[@"pic_w"] floatValue];
                     item.pic_h = [dict[@"pic_h"] floatValue];
+                    item.user_name = dict[@"user_name"];
+                    item.user_pic = dict[@"user_pic"];
                     [pass_pic addObject:item];
                 }
                 Upload *unpass = [[Upload alloc] init];

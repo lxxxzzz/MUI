@@ -31,6 +31,7 @@
 		9B3AFEF61CB741FA003502B5 /* MUIFolderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AFEF51CB741FA003502B5 /* MUIFolderLayout.m */; };
 		9B424D8D1CC47D86002AF2F8 /* MUILoginDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B424D8B1CC47D86002AF2F8 /* MUILoginDetailViewController.m */; };
 		9B424D8E1CC47D86002AF2F8 /* MUILoginDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B424D8C1CC47D86002AF2F8 /* MUILoginDetailViewController.xib */; };
+		9B4B86091FC167520032D8C1 /* NSURL+chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B86071FC167510032D8C1 /* NSURL+chinese.m */; };
 		9B4C97211CC4A5EC00999B46 /* MUIRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C971F1CC4A5EC00999B46 /* MUIRegisterViewController.m */; };
 		9B4C97221CC4A5EC00999B46 /* MUIRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C97201CC4A5EC00999B46 /* MUIRegisterViewController.xib */; };
 		9B585B371C3D014E00127E05 /* MUIMeCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B585B351C3D014E00127E05 /* MUIMeCollectCell.m */; };
@@ -206,6 +207,8 @@
 		9B424D8A1CC47D86002AF2F8 /* MUILoginDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUILoginDetailViewController.h; sourceTree = "<group>"; };
 		9B424D8B1CC47D86002AF2F8 /* MUILoginDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUILoginDetailViewController.m; sourceTree = "<group>"; };
 		9B424D8C1CC47D86002AF2F8 /* MUILoginDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MUILoginDetailViewController.xib; sourceTree = "<group>"; };
+		9B4B86071FC167510032D8C1 /* NSURL+chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+chinese.m"; sourceTree = "<group>"; };
+		9B4B86081FC167520032D8C1 /* NSURL+chinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+chinese.h"; sourceTree = "<group>"; };
 		9B4C971E1CC4A5EC00999B46 /* MUIRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUIRegisterViewController.h; sourceTree = "<group>"; };
 		9B4C971F1CC4A5EC00999B46 /* MUIRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUIRegisterViewController.m; sourceTree = "<group>"; };
 		9B4C97201CC4A5EC00999B46 /* MUIRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MUIRegisterViewController.xib; sourceTree = "<group>"; };
@@ -986,6 +989,8 @@
 		9BFA38111C23A1E900E28636 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9B4B86081FC167520032D8C1 /* NSURL+chinese.h */,
+				9B4B86071FC167510032D8C1 /* NSURL+chinese.m */,
 				E057FF3B1E6550850069ACC8 /* MBProgressHUD.bundle */,
 				E0D32AB11D4B460D00DA961C /* UITextField+Shake.h */,
 				E0D32AB21D4B460D00DA961C /* UITextField+Shake.m */,
@@ -1059,7 +1064,7 @@
 				TargetAttributes = {
 					9BFA37481C22630300E28636 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 2WPQ52VK3B;
+						DevelopmentTeam = 2YE2UXN6E6;
 						ProvisioningStyle = Automatic;
 					};
 					9BFA37611C22630300E28636 = {
@@ -1241,6 +1246,7 @@
 				9B5FFEB71C9AA618009D3D90 /* MUIFeedbackSuccessView.m in Sources */,
 				9B77C2C61C86BEF900CD40CB /* MUILoginViewController.m in Sources */,
 				9BF20C971C23EF5D006E1065 /* NSString+MUIExtension.m in Sources */,
+				9B4B86091FC167520032D8C1 /* NSURL+chinese.m in Sources */,
 				9B7E1DAA1CC75900000E1419 /* MUIPhotoAuthViewController.m in Sources */,
 				9B7E1DA11CC735FA000E1419 /* MUIUserInfoNameEditViewController.m in Sources */,
 				9BB5783A1C2A86D700296FBA /* UISearchBar+MUIExtension.m in Sources */,
@@ -1397,7 +1403,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2WPQ52VK3B;
+				DEVELOPMENT_TEAM = 2YE2UXN6E6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1432,7 +1438,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2WPQ52VK3B;
+				DEVELOPMENT_TEAM = 2YE2UXN6E6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

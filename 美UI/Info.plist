@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MOBAppSecret</key>
-	<string>a6e0a43d2d753657c746fe5a6b992ee8</string>
-	<key>MOBAppkey</key>
-	<string>10035c9aaacbc</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要您的同意才能将图片存入相册</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleExecutable</key>
@@ -33,7 +27,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx14093609e92b28c0</string>
+				<string>wx7b103bbbe2dde46c</string>
 			</array>
 		</dict>
 	</array>
@@ -46,20 +40,17 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MOBAppSecret</key>
+	<string>a6e0a43d2d753657c746fe5a6b992ee8</string>
+	<key>MOBAppkey</key>
+	<string>10035c9aaacbc</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>log.umsns.com</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSTemporaryExceptionMinimumTLSVersion</key>
-				<string>TLSv1.1</string>
-			</dict>
-			<key>sns.whalecloud.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -77,10 +68,19 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
+			<key>sns.whalecloud.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
 		</dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要您的同意才能将图片存入相册</string>
 	<key>UIApplicationShortcutItems </key>
 	<array>
 		<dict>

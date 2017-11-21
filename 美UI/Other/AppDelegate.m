@@ -16,8 +16,8 @@
 #import <WXApi.h>
 
 
-static NSString *const kWeiXinAppId         = @"wx14093609e92b28c0";
-static NSString *const kWeiXinAppSecret     = @"6c4aa8aa89cc6c5844f56f7b3029537d";
+static NSString *const kWeiXinAppId         = @"wx7b103bbbe2dde46c";
+static NSString *const kWeiXinAppSecret     = @"22f16ea26c41c8413fba1791ac2328c2";
 static NSString *const kUmengAppId          = @"577b1346e0f55a9a58003efb";
 
 @implementation AppDelegate
